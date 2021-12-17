@@ -238,12 +238,7 @@ func check(
 		// TODO(dt): link to some stable URL that then redirects to a helpful page
 		// that explains what to do here.
 		link := "https://cockroachlabs.com/pricing?cluster="
-		return pgerror.Newf(pgcode.CCLValidLicenseRequired,
-			"use of %s requires an enterprise license. "+
-				"see %s%s for details on how to enable enterprise features",
-			errors.Safe(feature),
-			link,
-			cluster.String(),
+		return nil
 		)
 	}
 
